@@ -1,12 +1,23 @@
+document.addEventListener("DOMContentLoaded", function(){
+    Typed.new(".element", {
+        strings: ["Hello there,","I'm Emmanuel Ndukwe,<br>Am a Creative Front-End Web Developer and a Project Manager, I Care About Your Story.<br>Scroll Down To See My Portfolio.<br>"],
+        startDelay: 5000,
+        contentType: 'html',
+        typeSpeed: 30,
+        backDelay: 2000,
+        cursorChar: "_"
+    });
+});
+
 
 $(document).ready(function() {
 	   $(window).scroll(function() {
 	       
 	       var container = $('#header-banner').outerHeight(true);
-	       console.log(container);
+//	       console.log(container);
 	//this will calculate header's full height, with borders, margins, paddings
 	       var scrollVal = $(this).scrollTop();
-	       console.log(scrollVal);
+//	       console.log(scrollVal);
 	        if ( scrollVal > container - 50 ) {
 	            $('#portfolio').css({'position':'fixed','top' :'51px', 'z-index':'980','text-align': 'center','margin-bottom':'60px'});
 	        } else {
@@ -17,10 +28,10 @@ $(document).ready(function() {
 			
 	//this will calculate header's full height, with borders, margins, paddings
 	       var contact = $('.portHeight').outerHeight(true);
-	       console.log("contact: ",contact);
+//	       console.log("contact: ",contact);
 	//this will calculate header's full height, with borders, margins, paddings
 	       var scrollVal = $(this).scrollTop();
-	       console.log("scroll: ", scrollVal);
+//	       console.log("scroll: ", scrollVal);
 	        if ( scrollVal > contact + 390 ) {
 	            $('#contact').css({'position':'fixed','top' :'51px', 'z-index':'2000','text-align': 'center','margin-bottom':'60px'});
 	        } else {
@@ -31,60 +42,42 @@ $(document).ready(function() {
 
 	       
     });
- });
+
+    $("#myForm").on('submit', function(){
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var message = $('#message').val();
 
 
+        console.log(name);
+        emailjs.send("gmail","myPortfolio",{
+            name: name,
+            notes: "Check this out!",
+            from_name: email,
+            to_name: "etechgist@gmail.com",
+            message_html: message,
+            reply_to: email
+        })
+            .then(function(response) {
+                console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+                $('#supportForm').slideUp('fast');
+                $("#myAlert").fadeIn(900);
+                $('#name').val('');
+                $('#email').val('');
+                $('#message').val('');
+            }, function(err) {
+                console.log("FAILED. error=", err);
+                $("#myAlert2").fadeIn(900);
 
-
-
-
-
-/*$('document').ready(function(){
-    
-    $('#portfolio').affix({
-      offset: {
-          top: 450
-//        top: $('#header').height()
-      }
-});	
-    
-    $('#contact').affix({
-      offset: {
-          top: 1500
-//        top: $('#header').height()
-      }
-});	
-
-$('#sidebar').affix({
-      offset: {
-        top: 200
-      }
-});	
-    
-    $('#characterLeft').text('140 characters left');
-    $('#message').keydown(function () {
-        var max = 140;
-        var len = $(this).val().length;
-        if (len >= max) {
-            $('#characterLeft').text('You have reached the limit');
-            $('#characterLeft').addClass('red');
-            $('#btnSubmit').addClass('disabled');            
-        } 
-        else {
-            var ch = max - len;
-            $('#characterLeft').text(ch + ' characters left');
-            $('#btnSubmit').removeClass('disabled');
-            $('#characterLeft').removeClass('red');            
-        }
+            });
+        return false;
     });
-    
-})
-//
-//$(function(){
-//		$(".element").typed({
-//			strings: ["First sentence.", "Second sentence."],
-//			typeSpeed: 30,
-////            startDelay: 10000,
-//		});
-//	});
-*/
+
+});
+
+
+
+
+
+
+
