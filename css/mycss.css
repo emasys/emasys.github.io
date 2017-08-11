@@ -1,4 +1,11 @@
 /* CSS Document */
+*{
+    -webkit-transition: ease 400ms;
+    -moz-transition: ease 400ms;
+    -ms-transition: ease 400ms;
+    -o-transition: ease 400ms;
+    transition: ease 400ms;
+}
 
 .float {
 	position: fixed;
@@ -505,7 +512,7 @@ body{
 
 #header-banner{
  height: 500px;
-    background-color: #63D5C4;
+    background-color: #b38ed5;
     width: 100%;
     background-image:  url(https://raw.githubusercontent.com/emasys/portfolio/master/images/wallup-416297.jpg);
     background-size: cover;
@@ -542,7 +549,7 @@ body{
 /*    margin: 0 auto;*/
 /*    width: 40%;*/
 /*    word-spacing: 1em;*/
-    background-color: #1C192C;
+    background-color: #b38ed5;
 	text-align:center;
     font-family: 'Passion One', Verdana;
     font-size: 28px;
