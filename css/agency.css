@@ -43,6 +43,7 @@ h6 {
     left: 50%;
 }
 .bounce {
+    margin-top: 50px;
     -moz-animation: bounce 3s infinite;
     -webkit-animation: bounce 3s infinite;
     animation: bounce 3s infinite;
@@ -340,6 +341,7 @@ header.masthead {
   z-index: 2; }
 
 @media (min-width: 767px) {
+
   #portfolio .portfolio-item {
     margin: 0 0 30px; } }
 
