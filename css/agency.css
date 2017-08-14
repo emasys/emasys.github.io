@@ -170,14 +170,15 @@ body {
     #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
       color: #fec503; }
   #mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 100%;
+    font-size: 90%;
     font-weight: 400;
     padding: 0.75em 0;
     letter-spacing: 1px;
     color: white;
-      font-family: 'Pacifico', cursive;
-    text-transform: none; }
+      font-family: 'Kaushan Script','Pacifico', cursive;
+    text-transform: uppercase; }
     #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+
       color: #fed136; }
 
 @media (min-width: 992px) {
