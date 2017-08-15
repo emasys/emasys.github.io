@@ -22,7 +22,7 @@ $(document).ready(function(){
     });
 
 
-    $('#portfolioHelper').bind('appear', function(){
+    $('.sectionBox').bind('appear', function(){
         console.log("worked!");
 //        $('.sectionBox').fadeIn(1000).css({"opacity":"1","transition":"700ms ease"}).addClass('jelly');
         $('.sectionBox').fadeTo(1000,1);
@@ -30,16 +30,16 @@ $(document).ready(function(){
         console.log($('#one').is(':visible'));
     });
 
-    $('.showAbout').bind('appear', function(){
+    $('.sectionAbout').bind('appear', function(){
         console.log("worked too!");
         $('.sectionAbout').fadeTo(100,1).addClass('animated fadeInUp');
     });
 
-    $('.showContact').bind('appear', function(){
+    $('#contact').bind('appear', function(){
         $('#contact').fadeTo(100,1).addClass('animated fadeInUp');
     });
 
-    $('.showFooter').bind('appear', function(){
+    $('footer').bind('appear', function(){
         $('footer').fadeIn(2000).addClass('animated fadeInLeft');
     })
 
