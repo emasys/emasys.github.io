@@ -1,6 +1,50 @@
 /**
  * Created by eMASYS ND on 8/13/2017.
  */
+$(document).ready(function(){
+    $('.sectionBox,.sectionAbout, #contact, footer').fadeTo(100,0.1);
+    $('#one, #two, #three, #four, #five, #six').fadeTo(1000,0.2);
+
+    $('#oneImg').bind('appear', function(){
+        $('#one').fadeTo(1000,1).addClass('animated zoomIn');
+    }); $('#twoImg').bind('appear', function(){
+        $('#two').fadeTo(1000,1).addClass('animated zoomIn');
+    }); $('#threeImg').bind('appear', function(){
+        $('#three').fadeTo(1000,1).addClass('animated zoomIn');
+    }); $('#fourImg').bind('appear', function(){
+        $('#four').fadeTo(1000,1).addClass('animated zoomIn');
+    }); $('#fiveImg').bind('appear', function(){
+        $('#five').fadeTo(1000,1).addClass('animated zoomIn');
+    }); $('#sixImg').bind('appear', function(){
+        $('#six').fadeTo(1000,1).addClass('animated zoomIn');
+    }).bind('disappear', function(){
+        $('#one, #two, #three, #four, #five, #six').removeClass('animated zoomIn');
+    });
+
+
+    $('#portfolioHelper').bind('appear', function(){
+        console.log("worked!");
+//        $('.sectionBox').fadeIn(1000).css({"opacity":"1","transition":"700ms ease"}).addClass('jelly');
+        $('.sectionBox').fadeTo(1000,1);
+//            .addClass('animated fadeInUp');
+        console.log($('#one').is(':visible'));
+    });
+
+    $('.showAbout').bind('appear', function(){
+        console.log("worked too!");
+        $('.sectionAbout').fadeTo(100,1).addClass('animated fadeInUp');
+    });
+
+    $('.showContact').bind('appear', function(){
+        $('#contact').fadeTo(100,1).addClass('animated fadeInUp');
+    });
+
+    $('.showFooter').bind('appear', function(){
+        $('footer').fadeIn(2000).addClass('animated fadeInLeft');
+    })
+
+});
+
 
 $('.navbar-toggler').click(function(){
     $('#hamburg').toggleClass('fa-bars fa-times');
@@ -10,6 +54,7 @@ $('.navbar-collapse>ul>li>a').click(function() {
     $('#hamburg').removeClass('fa-times').addClass('fa-bars');
 
 });
+
 
 document.addEventListener("DOMContentLoaded", function(){
     Typed.new(".tt", {
