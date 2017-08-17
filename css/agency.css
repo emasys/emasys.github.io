@@ -755,9 +755,9 @@ ul.social-buttons {
     -moz-box-shadow: 0px 10px 34px -7px rgba(0,0,0,0.72);
     box-shadow: 0px 10px 34px -7px rgba(0,0,0,0.72);    /*transform: scale(-1);*/
     border-radius: 10px;
-    -webkit-animation: 1s 1s;
-    -o-animation: 1s 1s;
-    animation: 1s 1s;
+    -webkit-animation: .5s .5s;
+    -o-animation: .5s .5s;
+    animation: .5s .5s;
 }
 
 .sectionAbout{
@@ -778,6 +778,7 @@ ul.social-buttons {
 
 
 .jelly {
+  background-color: #ffffff;
     -webkit-animation: animation 1000ms linear both;
     animation: animation 1000ms linear both;
 }

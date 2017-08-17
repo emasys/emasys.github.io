@@ -25,7 +25,7 @@ $(document).ready(function(){
     $('.sectionBox').bind('appear', function(){
         console.log("worked!");
         $('.sectionBox').fadeTo(100,1)
-           .addClass('animated fadeInUp');
+           .addClass('animated zoomIn');
         // console.log($('#one').is(':visible'));
     });
 
