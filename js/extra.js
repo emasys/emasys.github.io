@@ -1,8 +1,6 @@
-/**
- * Created by eMASYS ND on 8/13/2017.
- */
+
 $(document).ready(function(){
-    $('.sectionBox,.sectionAbout, #contact, footer').fadeTo(100,0.1);
+    $('.sectionBox,.sectionAbout, #contact, footer').fadeTo(1000,0.2);
     $('#one, #two, #three, #four, #five, #six').fadeTo(1000,0.2);
 
     $('#oneImg').bind('appear', function(){
@@ -24,10 +22,9 @@ $(document).ready(function(){
 
     $('.sectionBox').bind('appear', function(){
         console.log("worked!");
-//        $('.sectionBox').fadeIn(1000).css({"opacity":"1","transition":"700ms ease"}).addClass('jelly');
-        $('.sectionBox').fadeTo(1000,1);
-//            .addClass('animated fadeInUp');
-        console.log($('#one').is(':visible'));
+        $('.sectionBox').fadeTo(100,1)
+           .addClass('animated fadeInUp');
+        // console.log($('#one').is(':visible'));
     });
 
     $('.sectionAbout').bind('appear', function(){
