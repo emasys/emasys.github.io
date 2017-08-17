@@ -1,4 +1,6 @@
-
+(function() {
+    emailjs.init("user_vxUe1nZ3FDkXzG5ch4QUF");
+})();
 $(document).ready(function(){
     $('.sectionBox,.sectionAbout, #contact, footer').fadeTo(1000,0.2);
     $('#one, #two, #three, #four, #five, #six').fadeTo(1000,0.2);
