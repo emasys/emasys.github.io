@@ -29,7 +29,9 @@ sr.reveal('#contact', {
 
 });
 
-$('.animate, .timeline li, .footerBox').scrolla('bind');
+$('.animate, .timeline li, .footerBox').scrolla({
+    mobile:true
+});
 // $('.timeline li').scrolla('bind');
 
 
