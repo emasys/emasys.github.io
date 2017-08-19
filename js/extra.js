@@ -1,23 +1,29 @@
 
+// Changing the defaults
+window.sr = ScrollReveal({ reset: true });
+
+// Customizing a reveal set
+sr.reveal('.img-fluid', { duration: 500 });
+
 $(document).ready(function(){
     $('.sectionBox,.sectionAbout, #contact, footer').fadeTo(1000,0.2);
-    $('#one, #two, #three, #four, #five, #six').fadeTo(1000,0.2);
+    // $('#one, #two, #three, #four, #five, #six').fadeTo(1000,0.2);
 
-    $('#oneImg').bind('appear', function(){
-        $('#one').fadeTo(1000,1).addClass('animated zoomIn');
-    }); $('#twoImg').bind('appear', function(){
-        $('#two').fadeTo(1000,1).addClass('animated zoomIn');
-    }); $('#threeImg').bind('appear', function(){
-        $('#three').fadeTo(1000,1).addClass('animated zoomIn');
-    }); $('#fourImg').bind('appear', function(){
-        $('#four').fadeTo(1000,1).addClass('animated zoomIn');
-    }); $('#fiveImg').bind('appear', function(){
-        $('#five').fadeTo(1000,1).addClass('animated zoomIn');
-    }); $('#sixImg').bind('appear', function(){
-        $('#six').fadeTo(1000,1).addClass('animated zoomIn');
-    }).bind('disappear', function(){
-        $('#one, #two, #three, #four, #five, #six').removeClass('animated zoomIn');
-    });
+    // $('#oneImg').bind('appear', function(){
+    //     $('#one').fadeTo(1000,1).addClass('animated zoomIn');
+    // }); $('#twoImg').bind('appear', function(){
+    //     $('#two').fadeTo(1000,1).addClass('animated zoomIn');
+    // }); $('#threeImg').bind('appear', function(){
+    //     $('#three').fadeTo(1000,1).addClass('animated zoomIn');
+    // }); $('#fourImg').bind('appear', function(){
+    //     $('#four').fadeTo(1000,1).addClass('animated zoomIn');
+    // }); $('#fiveImg').bind('appear', function(){
+    //     $('#five').fadeTo(1000,1).addClass('animated zoomIn');
+    // }); $('#sixImg').bind('appear', function(){
+    //     $('#six').fadeTo(1000,1).addClass('animated zoomIn');
+    // }).bind('disappear', function(){
+    //     $('#one, #two, #three, #four, #five, #six').removeClass('animated zoomIn');
+    // });
 
 
     $('.sectionBox').bind('appear', function(){
