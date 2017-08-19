@@ -59,14 +59,14 @@
             <ul class="navbar-nav ml-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#portfolioHelper">Portfolio</a>
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#showAbout">About</a>
+                    <a class="nav-link" href="#about">About</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#showContact" >Contact</a>
+                    <a class="nav-link" href="#contact" >Contact</a>
                 </li>
             </ul>
         </div>
@@ -80,7 +80,7 @@
                 <div class="intro-lead-in">Front-end Web Developer</div>
                 <div class="intro-heading"><span class="tt"></span></div>
                 <div id="arrow">
-                    <a href="#portfolioHelper" >
+                    <a href="#portfolio" >
                         <img width="40" class="bounce" height="40" alt="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyDQoJbDE4OS45OTktMTkwYzIwLjE3OC0yMC4xNzgsNTMuMTY0LTE5LjkxMyw3My42NzIsMC41OTVsMCwwYzIwLjUwOCwyMC41MDksMjAuNzcyLDUzLjQ5MiwwLjU5NSw3My42NzFMMjkzLjc1MSw0NTUuODY4eiIvPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIyMC4yNDksNDU1Ljg2OGMyMC4xOCwyMC4xNzksNTMuMTY0LDE5LjkxMyw3My42NzItMC41OTVsMCwwYzIwLjUwOS0yMC41MDgsMjAuNzc0LTUzLjQ5MywwLjU5Ni03My42NzINCglsLTE5MC0xOTBjLTIwLjE3OC0yMC4xNzgtNTMuMTY0LTE5LjkxMy03My42NzEsMC41OTVsMCwwYy0yMC41MDgsMjAuNTA5LTIwLjc3Miw1My40OTItMC41OTUsNzMuNjcxTDIyMC4yNDksNDU1Ljg2OHoiLz4NCjwvc3ZnPg0K"
                                 />
                     </a>
@@ -92,8 +92,7 @@
 
 
     <!-- Portfolio Grid -->
-    <div id="portfolioHelper"></div>
-    <section class="sectionBox" id="portfolio">
+    <section class="sectionBox" id="portfolio" data-animate="slideInUp" data-duration="1.0s" data-delay="0s" data-offset="100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -110,7 +109,9 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="img/cs.fw.png" alt="" id="oneImg">
+                        <img class="img-fluid animate" data-animate="bounceIn" 
+                        data-duration="1.0s" data-delay="0.1s" data-offset="100"
+                        src="img/cs.fw.png" alt="" id="oneImg">
                     </div>
                     <div class="portfolio-caption">
                         <h4>Cash Stream Games</h4>
@@ -124,7 +125,9 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="img/empty.fw.png" alt="" id="twoImg">
+                        <img class="img-fluid animate" data-animate="bounceIn" 
+                        data-duration="1.0s" data-delay="0.1s" data-offset="100"
+                        src="img/empty.fw.png" alt="" id="twoImg">
                     </div>
                     <div class="portfolio-caption">
                         <h4>Top Secret</h4>
@@ -138,7 +141,9 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="img/empty.fw.png" alt="" id="threeImg">
+                        <img class="img-fluid animate" data-animate="bounceIn" 
+                        data-duration="1.0s" data-delay="0.1s" data-offset="100" 
+                        src="img/empty.fw.png" alt="" id="threeImg">
                     </div>
                     <div class="portfolio-caption">
                         <h4>Top Secret</h4>
@@ -152,7 +157,9 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="img/empty.fw.png" alt="" id="fourImg">
+                        <img class="img-fluid animate" data-animate="bounceIn" 
+                        data-duration="1.0s" data-delay="0.1s" data-offset="100"  
+                        src="img/empty.fw.png" alt="" id="fourImg">
                     </div>
                     <div class="portfolio-caption">
                         <h4>Top Secret</h4>
@@ -166,7 +173,9 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="img/empty.fw.png" alt="" id="fiveImg">
+                        <img class="img-fluid animate" data-animate="bounceIn" 
+                        data-duration="1.0s" data-delay="0.1s" data-offset="100" 
+                        src="img/empty.fw.png" alt="" id="fiveImg">
                     </div>
                     <div class="portfolio-caption">
                         <h4>Top Secret</h4>
@@ -180,7 +189,9 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="img/empty.fw.png" alt="" id="sixImg">
+                        <img class="img-fluid animate" data-animate="bounceIn" 
+                        data-duration="1.0s" data-delay="0.1s" data-offset="100" 
+                        src="img/empty.fw.png" alt="" id="sixImg">
                     </div>
                     <div class="portfolio-caption">
                         <h4>Top Secret</h4>
@@ -192,10 +203,9 @@
         </div>
     </section>
 
-<div class="showAbout" id="showAbout"></div>
 
     <!-- About -->
-    <section id="about" class="sectionAbout">
+    <section id="about" class="sectionAbout"  data-animate="slideInUp" data-duration="1.0s" data-delay="0.1s" data-offset="100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -206,7 +216,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="timeline">
-                        <li>
+                        <li data-animate="flipInX" data-duration="1.0s" data-delay="0.1s" data-offset="100">
                             <div class="timeline-image">
                                 <img class="rounded-circle img-fluid" src="img/dp.fw.png" alt="">
                             </div>
@@ -222,7 +232,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="timeline-inverted">
+                        <li class="timeline-inverted" data-animate="flipInX" data-duration="1.0s" data-delay="0.1s" data-offset="100">
                             <div class="timeline-image">
                                 <img class="rounded-circle img-fluid" src="img/res.jpg" alt="">
                             </div>
@@ -243,7 +253,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li data-animate="flipInX" data-duration="1.0s" data-delay="0.1s" data-offset="100">
                             <div class="timeline-image">
                                 <img class="rounded-circle img-fluid" src="img/skills.jpg" alt="">
                             </div>
@@ -270,7 +280,7 @@
 
 
 
-                        <li class="timeline-inverted">
+                        <li class="timeline-inverted" data-animate="flip" data-duration="1.0s" data-delay="0.1s" data-offset="100">
                             <div class="timeline-image">
                                 <h4>Be Part
                                     <br>Of My
@@ -284,10 +294,8 @@
     </section>
 
 
-    <div class="showContact" id="showContact"></div>
-
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" data-animate="slideInUp" data-duration="1.0s" data-delay="0.1s" data-offset="100">
         <div class="container" id="y">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -330,10 +338,8 @@
         </div>
     </section>
 
-    <div class="showFooter"></div>
-    <!-- Footer -->
     <footer>
-        <div class="container footerBox">
+            <div class="container footerBox" data-animate="swing" data-duration="1.0s" data-delay="0.1s" data-offset="100">
             <div class="row">
                 <div class="col-md-4">
                     <!--<span class="copyright">Copyright &copy; 2017 eMASYS </span>-->
@@ -421,19 +427,23 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="js/extra.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="js/appear.js"></script>
+    <!-- <script src="js/appear.js"></script> -->
+    <script src="js/scrollreveal.min.js"></script>
+    <script src="js/scrolla.jquery.min.js"></script>
+    <script src="js/extra.js"></script>
+    
+    
 
     <!-- Contact form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 
-    <!-- Custom scripts for this template -->
+    <!-- Custom scripts -->
     <script src="js/agency.min.js"></script>
     <script src="js/typed.js"></script>
 
