@@ -1,12 +1,11 @@
-
 // Changing the defaults
 window.sr = ScrollReveal({ reset: true });
 
 // Customizing a reveal set
 sr.reveal('.img-fluid', { duration: 500 });
 
-$(document).ready(function(){
-    $('.sectionBox,.sectionAbout, #contact, footer').fadeTo(1000,0.2);
+$(document).ready(function() {
+    $('.sectionBox,.sectionAbout, #contact, footer').fadeTo(1000, 0.2);
     // $('#one, #two, #three, #four, #five, #six').fadeTo(1000,0.2);
 
     // $('#oneImg').bind('appear', function(){
@@ -26,30 +25,30 @@ $(document).ready(function(){
     // });
 
 
-    $('.sectionBox').bind('appear', function(){
+    $('.sectionBox').bind('appear', function() {
         console.log("worked!");
-        $('.sectionBox').fadeTo(100,1)
-           .addClass('animated fadeInUp');
+        $('.sectionBox').fadeTo(100, 1)
+            .addClass('animated fadeInUp');
         // console.log($('#one').is(':visible'));
     });
 
-    $('.sectionAbout').bind('appear', function(){
+    $('.sectionAbout').bind('appear', function() {
         console.log("worked too!");
-        $('.sectionAbout').fadeTo(100,1).addClass('animated fadeInUp');
+        $('.sectionAbout').fadeTo(100, 1).addClass('animated fadeInUp');
     });
 
-    $('#contact').bind('appear', function(){
-        $('#contact').fadeTo(100,1).addClass('animated fadeInUp');
+    $('#contact').bind('appear', function() {
+        $('#contact').fadeTo(100, 1).addClass('animated fadeInUp');
     });
 
-    $('footer').bind('appear', function(){
+    $('footer').bind('appear', function() {
         $('footer').fadeIn(2000).addClass('animated fadeInLeft');
     })
 
 });
 
 
-$('.navbar-toggler').click(function(){
+$('.navbar-toggler').click(function() {
     $('#hamburg').toggleClass('fa-bars fa-times');
 });
 
@@ -59,12 +58,13 @@ $('.navbar-collapse>ul>li>a').click(function() {
 });
 
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function() {
     Typed.new(".tt", {
-        strings: ["Hello there,","I'm Emmanuel Ndukwe",
-            "I'm a freelance front-end<br> web developer",
+        strings: ["Hello there,", "I'm Emmanuel Ndukwe",
+            "I'm a freelance full stack<br> web developer",
             "I would like to <br>work with you",
-            "It's Nice To Meet You."],
+            "It's Nice To Meet You."
+        ],
         startDelay: 2000,
         contentType: 'html',
         typeSpeed: 5,
@@ -73,37 +73,37 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 });
 
-var feedback = '<div class="alert alert-success alert-dismissible fade show" role="alert">'+
-    '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>'+
-    '</button>'+
+var feedback = '<div class="alert alert-success alert-dismissible fade show" role="alert">' +
+    '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>' +
+    '</button>' +
     '<strong>Thank you!</strong> Your message has been sent.</div>';
 
-var errorMsg = '<div class="alert alert-danger alert-dismissible fade show" role="alert">'+
-    '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>'+
-    '</button>'+
+var errorMsg = '<div class="alert alert-danger alert-dismissible fade show" role="alert">' +
+    '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>' +
+    '</button>' +
     '<strong>Sorry, </strong>something went wrong</div>';
 
-$("#submit").on('click', function(){
-    if($('#email').val() !=='' && $('#message').val() !=='') {
+$("#submit").on('click', function() {
+    if ($('#email').val() !== '' && $('#message').val() !== '') {
         var email = $('#email').val();
         var message = $('#message').val();
         emailjs.send("gmail", "template_NHzH2D6l", {
-            notes: "Check this out!",
-            from_name: email,
-            to_name: "etechgist@gmail.com",
-            message_html: message
-        })
-            .then(function (response) {
+                notes: "Check this out!",
+                from_name: email,
+                to_name: "etechgist@gmail.com",
+                message_html: message
+            })
+            .then(function(response) {
                 console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
                 $('#email').val('');
                 $('#message').val('');
                 $('#err').html(feedback);
-            }, function (err) {
+            }, function(err) {
                 console.log("FAILED. error=", err);
                 $('#err').html(errorMsg);
             });
-    }else{
+    } else {
         $('#content').html(errorMsg);
     }
-//    return false;
+    //    return false;
 });
