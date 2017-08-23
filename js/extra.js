@@ -61,7 +61,7 @@ $('.navbar-collapse>ul>li>a').click(function() {
 document.addEventListener("DOMContentLoaded", function() {
     Typed.new(".tt", {
         strings: ["Hello there,", "I'm Emmanuel Ndukwe",
-            "I'm a freelance full stack<br> web developer",
+            "I'm a freelance full-stack<br> web developer",
             "I would like to <br>work with you",
             "It's Nice To Meet You."
         ],
