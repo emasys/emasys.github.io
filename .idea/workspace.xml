@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8adb664-d14a-42ef-9fb6-3c4c40770251" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="emasys.github.io.iws" />
@@ -229,7 +228,11 @@
       <created>1503476237378</created>
       <updated>1503476237378</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v2.0">
+      <created>1503476676538</created>
+      <updated>1503476676538</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -291,7 +294,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="minor design modification" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor design modification" />
+    <MESSAGE value="v2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
