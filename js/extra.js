@@ -5,7 +5,7 @@ window.sr = ScrollReveal({ reset: true });
 sr.reveal('.img-fluid', { duration: 500 });
 
 $(document).ready(function() {
-    $('.sectionBox,.sectionAbout, #contact, footer').fadeTo(1000, 0.2);
+    $('#portfolioHelper,.sectionAbout, #contact, footer').fadeTo(1000, 0.2);
     // $('#one, #two, #three, #four, #five, #six').fadeTo(1000,0.2);
 
     // $('#oneImg').bind('appear', function(){
@@ -25,15 +25,13 @@ $(document).ready(function() {
     // });
 
 
-    $('.sectionBox').bind('appear', function() {
-        console.log("worked!");
-        $('.sectionBox').fadeTo(100, 1)
+    $('#portfolioHelper').bind('appear', function() {
+        $(this).fadeTo(100, 1)
             .addClass('animated fadeInUp');
         // console.log($('#one').is(':visible'));
     });
 
     $('.sectionAbout').bind('appear', function() {
-        console.log("worked too!");
         $('.sectionAbout').fadeTo(100, 1).addClass('animated fadeInUp');
     });
 
