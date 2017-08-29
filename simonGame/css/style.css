@@ -62,6 +62,10 @@ body {
     cursor: pointer;
 }
 
+.light-up {
+    opacity: 1;
+}
+
 .light-up0 {
     opacity: 1;
     -webkit-box-shadow: 1px 0px 50px 0px #0BF00B;
