@@ -1,4 +1,4 @@
-#container{
+#container {
     width: 300px;
     height: 600px;
     margin: 50px auto;
@@ -6,13 +6,14 @@
     background-color: #ffffff;
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.36);
 }
-h2{
-    font-size:32px ;
+
+h2 {
+    font-size: 32px;
     font-weight: bolder;
     margin-bottom: 5px;
-
 }
-#header{
+
+#header {
     background-image: url("../images/time.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -27,7 +28,8 @@ h2{
     position: relative;
     z-index: 11;
 }
-.title{
+
+.title {
     font-family: 'Pacifico', cursive;
     display: flex;
     justify-content: center;
@@ -36,28 +38,32 @@ h2{
     /*margin-top: 100px;*/
     color: #cc4e4d;
     text-shadow: 0 1px 10px #000000;
-
 }
-#wrapper{
+
+#wrapper {
     margin: 50px auto;
     width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-body{
-    background-color: grey;
+
+body {
+    background: url('../images/bgimg.fw.png') no-repeat center center;
+    background-size: cover;
 }
+
 .glow {
-    display:inline-block;
+    display: inline-block;
     width: 150px;
     height: 150px;
     background: #cc4e4d;
     position: relative;
     border-radius: 50%;
-    z-index:1;
+    z-index: 1;
 }
-.inSession{
+
+.inSession {
     border: 2px solid #cc4e4d;
     display: inline;
     border-radius: 50px;
@@ -66,7 +72,8 @@ body{
     background-color: white;
     color: #cc4e4d;
 }
-.onBreak{
+
+.onBreak {
     border: 2px solid #cc4e4d;
     display: inline;
     border-radius: 50px;
@@ -75,21 +82,23 @@ body{
     background-color: white;
     color: #cc4e4d;
 }
-#status{
+
+#status {
     position: absolute;
     top: 220px;
     width: 150px;
     height: 50px;
-    left:720px;
+    left: 720px;
     z-index: 20;
     color: #ffffff;
     text-shadow: 0 1px 5px #cc4e4d;
     font-family: 'Ubuntu', sans-serif;
 }
 
-.pulse{
+.pulse {
     -webkit-animation: pulse linear 1s infinite;
 }
+
 @-webkit-keyframes pulse {
     0% {
         -webkit-transform: scale(1);
@@ -102,9 +111,9 @@ body{
     }
 }
 
-.inner{
-    border:2px solid #cc4e4d;
-    display:flex;
+.inner {
+    border: 2px solid #cc4e4d;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 200px;
@@ -117,7 +126,8 @@ body{
     border-radius: 50%;
     z-index: 2;
 }
-.control{
+
+.control {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,32 +135,35 @@ body{
     text-shadow: 0 2px 2px black;
     margin-bottom: 10px;
 }
-#settings{
+
+#settings {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #cc4e4d;
     margin-bottom: 10px;
     z-index: 3;
-
 }
-#breathingSpace{
+
+#breathingSpace {
     margin-right: 10px;
 }
-.break{
+
+.break {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
     color: black;
     float: left;
     margin: 5px;
 }
-.session{
+
+.session {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
     float: right;
     color: black;
     margin: 5px;
 }
 
-#settings-panel{
+#settings-panel {
     position: absolute;
     top: 240px;
     width: 300px;
@@ -161,56 +174,62 @@ body{
     color: #ffffff;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
     margin: 5px auto;
-    background-color:  #cc4e4d;
+    background-color: #cc4e4d;
     font-family: 'Ubuntu', sans-serif;
 }
-.number{
+
+.number {
     font-size: 20px;
     line-height: 20px;
     padding: 10px;
 }
-#play{
+
+#play {
     cursor: pointer;
 }
-#play:active{
+
+#play:active {
     margin-top: 1px;
     margin-bottom: -1px;
     text-shadow: 1px 0px 0px black;
 }
 
-#reset{
+#reset {
     cursor: pointer;
     text-shadow: 0 2px 2px black;
 }
-#reset:active{
+
+#reset:active {
     margin-top: 1px;
     margin-bottom: -1px;
     text-shadow: 0px 0px 0px black;
 }
 
-#setting{
+#setting {
     cursor: pointer;
     margin: 0;
     padding: 0;
     margin-right: 20px;
     text-shadow: 0 2px 2px black;
 }
-#setting:active{
+
+#setting:active {
     margin-top: 1px;
     margin-bottom: -1px;
     text-shadow: 0px 0px 0px black;
 }
-#pause{
+
+#pause {
     cursor: pointer;
 }
-#pause:active{
+
+#pause:active {
     margin-top: 1px;
     margin-bottom: -1px;
     text-shadow: 1px 0px 0px black;
 }
 
-#sessionName{
-
+#sessionName {
     border: 2px solid #ffffff;
     display: inline;
     border-radius: 50px;
@@ -221,23 +240,20 @@ body{
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
-.footer{
+.footer {
     margin: 0 auto;
     text-align: center;
     width: 300px;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
-.footer a{
+.footer a {
     text-decoration: none;
     color: #cc4e4d;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 1);
-
 }
 
-
-
-a:hover{
+a:hover {
     text-decoration: none;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
     -webkit-transition: ease-in-out 400ms;
