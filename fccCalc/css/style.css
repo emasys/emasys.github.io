@@ -1,28 +1,33 @@
-*{
+* {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.container{
+
+.container {
     /*background-color: blue;*/
     margin: 100px auto;
     width: 300px;
     padding: 5px;
 }
-header{
+
+header {
     text-align: center;
 }
-body{
-    background-color: rgba(0, 0, 0, 0.09);
+
+body {
+    background: url('../images/bgimg.fw.png') no-repeat center center;
+    background-size: cover;
 }
 
-#borders{
+#borders {
     border: 3px solid #3c3f41;
     display: inline;
     color: #3c3f41;
-    border-radius: 2px;
+    border-radius: 10px;
     padding: 5px 10px;
     margin: 0 0 30px 0;
 }
-#screen{
+
+#screen {
     margin-top: 30px;
     height: 80px;
     width: 200px;
@@ -35,16 +40,17 @@ body{
     transition: 1s ease;
     overflow: hidden;
 }
-#expressions{
+
+#expressions {
     height: 30px;
-
-
 }
-#results{
+
+#results {
     height: 50px;
     font-size: 48px;
     line-height: 48px;
 }
+
 .container .buttons li {
     float: left;
     width: 50px;
@@ -59,64 +65,86 @@ body{
     box-shadow: 0px 3px 1px #000000;
     line-height: 40px;
 }
-#err{
+
+#err {
     float: left;
     font-size: 11px;
 }
-ul{
+
+ul {
     list-style-type: none;
-
 }
 
-li{
+li {
     background: #3c3f41;
-
 }
+
 .container .buttons li:active {
     box-shadow: 0px 0px 0px #000;
     margin-top: 1px;
     margin-bottom: 4px;
     /*transition: all 0.5s ease-out;*/
 }
-.firstRow{
+
+.firstRow {
     background-color: gray;
     color: #ffffff;
 }
 
-.sideCol{
+.sideCol {
     background-color: gray;
     color: #ffffff;
 }
 
-#equals{
+#equals {
     background-color: mediumspringgreen;
     color: #ffffff;
 }
 
-
-.typed-cursor{
+.typed-cursor {
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
 }
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.footer{
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.footer {
     color: #000000;
     font-size: 12px;
     text-align: center;
@@ -125,12 +153,12 @@ li{
     padding-top: 100px;
 }
 
-.footer:hover{
+.footer:hover {
     text-shadow: 0 2px 5px #000000;
     transition: 400ms ease;
 }
 
-.footer a{
+.footer a {
     color: #000000;
     font-weight: 900;
     text-decoration: none;
