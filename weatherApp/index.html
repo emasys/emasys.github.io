@@ -1,69 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>weather app</title>
+    <meta name="description" content="A simple weather app that consumes darkski api.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/material.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/material.js"></script>
 
-    <title>Weather App</title>
-
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="cover.css" rel="stylesheet">
-    <!--[if lt IE 9] -->
-    <!--<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
-    <!--<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
-    <!--<![endif]-->
 </head>
 
 <body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-    <div class="site-wrapper">
 
-        <div class="site-wrapper-inner">
 
-            <div class="cover-container">
+    <div class="mdl-grid">
+        <div class="mdl-cell--5-offset-desktop ">
+            <div class="mdl-cell--middle">
+                <h3 class="display-2">
+                    welcome
+                </h3>
+            </div>
 
-                <div class="masthead clearfix">
-                    <div class="inner">
-                        <h3 class="masthead-brand text-center">Weather App</h3>
-                        <nav>
-                            <ul class="nav masthead-nav">
-                                <li class="active"><a href="#">Coordinates: <span  id="location"></span></a></li>
+            <div class="demo-card-square mdl-card mdl-shadow--2dp ">
+                <div class=" img-sync mdl-card__title mdl-card--expand ">
+                    <h2 class="mdl-card__title-text" id="minutely"></h2>
+                    <p class="mdl-card__title-text" id="today"></p>
 
-                            </ul>
-                        </nav>
-
-                    </div>
                 </div>
-
-                <div class="inner cover">
-                    <h1 class="cover-heading" id="temp"></h1>
-                    <h1 class="cover-heading" id="minutely">
-                        </h>
-                        <h2 class="cover-heading" id="info">Real Time Weather Forecast For</h2>
-                        <p class="lead" id="city"></p>
-                        <p class="lead">
-                            <a href="#" class="btn btn-lg btn-default" id="convFtoC">Convert to °F</a>
-                            <a href="#" class="btn btn-lg btn-default" id="convCtoF">Convert to °C</a>
-                        </p>
+                <div class="mdl-card__supporting-text" id="city">
+                    123, street name, city, country
                 </div>
+                <div class="mdl-card__actions mdl-card--border">
+                    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                  View Updates
+                    </button>
+                    <span id="location"></span>
 
-                <div class="mastfoot">
-                    <div class="inner">
-                        <p>Coded by <a href="https://twitter.com/emasys_nd">eMASYS</a></p>
-                    </div>
+                </div>
+                <div class="mdl-card__menu">
+                    <button class="mdl-button mdl-button--icon mdl-button--raised mdl-js-button mdl-js-ripple-effect" id="temp" style="width:70px; height:70px; background-color:aliceblue">
+                          C
+                        </button>
                 </div>
             </div>
         </div>
     </div>
 
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="api.js"></script>
-
+    <script src="js/api.js"></script>
 </body>
 
 </html>

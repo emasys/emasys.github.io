@@ -4,6 +4,7 @@
 
 let answer = document.getElementById('results');
 let expressions = document.getElementById('expressions');
+
 $(document).ready(function () {
     $('#err').hide();
 
@@ -13,6 +14,16 @@ $(document).ready(function () {
             let value = e.target.innerHTML;
             if (value === 'x') {
                 value = '*';
+            }
+
+            if (value === '.') {
+                let x = expressions.innerHTML;
+                let y = x.split('');
+                if (y.indexOf('.') === -1) {
+                    value = '.';
+                } else {
+                    value = '';
+                }
             }
 
             if (value === '÷') {
