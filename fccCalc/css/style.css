@@ -153,10 +153,7 @@ li {
     padding-top: 100px;
 }
 
-.footer:hover {
-    text-shadow: 0 2px 5px #000000;
-    transition: 400ms ease;
-}
+
 
 .footer a {
     color: #000000;
