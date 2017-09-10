@@ -75,7 +75,7 @@ function weather() {
             $('#temp').html(f + "<em>°F</em>");
             $('#minutely').html(s);
             $('#today').html(data.currently.summary);
-            $('#bg').html(data.currently.icon);
+            $('#cond').html(data.currently.summary);
             $('#summary').html(data.hourly.summary);
 
             // var timestamp = moment.unix(data.daily.data[0].time);
