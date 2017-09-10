@@ -1,40 +1,88 @@
-.demo-card-square.mdl-card {
-    width: 320px;
-    height: auto;
+* {
+    font-family: 'Roboto', sans-serif;
+    color: black;
 }
 
-.demo-card-square>.mdl-card__title {
-    color: #fff;
-    /* background: url('../assets/demos/dog.png') center center 15% no-repeat #46B6AC; */
+body {
+    position: relative;
 }
 
-.img-sync {
+.bgImg {
+    /* background-position: center center; */
+    /* background: url('/images/clear-night.png') center center no-repeat; */
     display: block;
-    background-color: #46B6AC;
-    /* background-image: url('https://raw.githubusercontent.com/emasys/webDev/master/weatherApp/images/partly_cloudy.jpg'); */
     background-size: cover;
+    /* background-repeat: no-repeat; */
+    height: 500px;
+    width: 100%;
+    padding-top: 50px;
 }
 
-#temp {
-    padding: 10px;
+.temp {
+    position: relative;
+    margin: 0 auto;
+    padding: 50px 0px 5px 40px;
+    background-color: transparent;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 72px;
+    cursor: pointer;
 }
 
-#minutely {
-    margin-top: 60px;
-    color: #444;
-    background-color: rgba(255, 255, 255, 0.7);
+.fixIcon {
+    padding-right: 15px;
+    font-weight: bolder;
+}
+
+.location {
+    font-size: 24px;
     padding: 20px;
+}
+
+.temp span {
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    z-index: 100;
+    text-shadow: 0px 0px 16px white;
+}
+
+.temp .WeatherIcons {
+    position: absolute;
+    font-size: 200px;
+    top: 10px;
+    right: 50px;
+    text-shadow: 0px 0px 16px white;
+    z-index: 500;
+}
+
+.temp em {
+    font-style: normal;
     font-size: 16px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-shadow: 0px 0px 10px rgb(248, 243, 243);
 }
 
-#today {
-    margin-top: 20px;
-    color: #444;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px;
-    font-size: 14px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-shadow: 0px 0px 10px rgb(248, 243, 243);
+#info {
+    position: absolute;
+    top: 370px;
+    border-radius: 10px 10px 0 0;
+    left: 10px;
+    right: 10px;
+    /* width: 98%; */
+}
+
+#city {
+    font-size: 16px;
+    display: inline;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+#summary {}
+
+.weekly {
+    font-size: 40px;
 }
