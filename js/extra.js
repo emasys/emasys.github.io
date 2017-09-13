@@ -3,9 +3,10 @@ window.sr = ScrollReveal({reset: true});
 
 // Customizing a reveal set
 sr.reveal('.img-fluid', {duration: 500});
+// .reveal('#portfolioHelper', {duration: 500});
 
 $(document).ready(function () {
-    $('#portfolioHelper,.sectionAbout, #contact, footer').fadeTo(1000, 0.2);
+    $('#portfolioHelper,.sectionAbout, #contact, footer').fadeTo(1000, 0.9);
     // $('#one, #two, #three, #four, #five, #six').fadeTo(1000,0.2);
     // $('#oneImg').bind('appear', function(){
     // $('#one').fadeTo(1000,1).addClass('animated zoomIn'); });
@@ -21,13 +22,17 @@ $(document).ready(function () {
     // $('#six').fadeTo(1000,1).addClass('animated zoomIn'); }).bind('disappear',
     // function(){     $('#one, #two, #three, #four, #five,
     // #six').removeClass('animated zoomIn'); });
+    // $('#portfolioHelper').bind('appear', function () {     $(this) .fadeTo(100,
+    // 1)         .addClass('animated fadeInUp');     //
+    // console.log($('#one').is(':visible')); });
 
-    $('#portfolioHelper').bind('appear', function () {
-        $(this)
-            .fadeTo(100, 1)
-            .addClass('animated fadeInUp');
-        // console.log($('#one').is(':visible'));
-    });
+    $('.section-heading').bind('appear', function () {
+        $(this).addClass('animated rubberBand');
+    })
+
+    $('#last').bind('appear', function () {
+        $(this).addClass('animated flip');
+    })
 
     $('.sectionAbout').bind('appear', function () {
         $('.sectionAbout')
