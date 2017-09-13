@@ -12,48 +12,49 @@ const days = date => {
 
 const getIcon = (icon, classname, idName) => {
     if (icon === 'clear-day') {
-        $(classname).css("backgroundImage", "url(\"https://raw.githubusercontent.com/emasys/webDev/master/weatherApp/images/c" +
-                "learDay.jpg\")");
+        $(classname).css("backgroundImage", "url('https://raw.githubusercontent.com/emasys/emasys.github.io/master/weatherApp" +
+                "/images/clearDay.jpg')");
         $(idName).addClass('ion-ios-sunny');
     } else if (icon === 'clear-night') {
-        $(classname).css("backgroundImage", "url(\"https://raw.githubusercontent.com/emasys/webDev/master/weatherApp/images/c" +
-                "lear-night.png\")");
+        $(classname).css("backgroundImage", "url('https://raw.githubusercontent.com/emasys/emasys.github.io/master/weatherApp" +
+                "/images/clear-night.png')");
         $(idName).addClass('ion-ios-moon');
     } else if (icon === 'partly-cloudy-day') {
-        $(classname).css("backgroundImage", "url(\"images/partly-cloudy.jpg\")");
+        $(classname).css("backgroundImage", "url('https://raw.githubusercontent.com/emasys/emasys.github.io/master/weatherApp" +
+                "/images/partly-cloudy.jpg')");
         $(idName).addClass('ion-ios-partlysunny');
     } else if (icon === 'partly-cloudy-night') {
-        $(classname).css("backgroundImage", "url(\"https://raw.githubusercontent.com/emasys/webDev/master/weatherApp/images/p" +
-                "artly-night.jpg\")");
+        $(classname).css("backgroundImage", "url(\"https://raw.githubusercontent.com/emasys/emasys.github.io/master/weatherAp" +
+                "p/images/partly-night.jpg\")");
         $(idName).addClass('ion-ios-cloudy-night');
     } else if (icon === 'cloudy') {
-        $(classname).css("backgroundImage", "url(\"https://raw.githubusercontent.com/emasys/webDev/master/weatherApp/images/c" +
-                "loudy.jpg\")");
+        $(classname).css("backgroundImage", "url(\"https://raw.githubusercontent.com/emasys/emasys.github.io/master/weatherAp" +
+                "p/images/cloudy.jpg\")");
         $(idName).addClass('ion-ios-cloudy');
     } else if (icon === 'rain') {
-        $(classname).css("backgroundImage", "url(\"https://raw.githubusercontent.com/emasys/webDev/master/weatherApp/images/r" +
-                "ain.jpg\")");
+        $(classname).css("backgroundImage", "url(\"https://raw.githubusercontent.com/emasys/emasys.github.io/master/weatherAp" +
+                "p/images/rain.jpg\")");
         $(idName).addClass('ion-ios-rainy');
     } else if (icon === 'sleet') {
-        $(classname).css("backgroundImage", "url(\"https://raw.githubusercontent.com/emasys/webDev/master/weatherApp/images/s" +
-                "now.jpg\")");
+        $(classname).css("backgroundImage", "url(\"https://raw.githubusercontent.com/emasys/emasys.github.io/master/weatherAp" +
+                "p/images/snow.jpg\")");
         $(idName).addClass('ion-ios-rainy');
     } else if (icon === 'snow') {
-        $(classname).css("backgroundImage", "url(\"https://raw.githubusercontent.com/emasys/webDev/master/weatherApp/images/s" +
-                "leet.jpeg\")");
+        $(classname).css("backgroundImage", "url(\"https://raw.githubusercontent.com/emasys/emasys.github.io/master/weatherAp" +
+                "p/images/sleet.jpeg\")");
         $(idName).addClass('ion-ios-snowy');
     } else if (icon === 'wind') {
-        $(classname).css("backgroundImage", "url(\"https://raw.githubusercontent.com/emasys/webDev/master/weatherApp/images/w" +
-                "ind.jpg\")");
+        $(classname).css("backgroundImage", "url(\"https://raw.githubusercontent.com/emasys/emasys.github.io/master/weatherAp" +
+                "p/images/wind.jpg\")");
         $(idName).addClass('ion-leaf');
     } else if (icon === 'fog') {
-        $(classname).css("backgroundImage", "url(\"https://raw.githubusercontent.com/emasys/webDev/master/weatherApp/images/f" +
-                "og.jpg\")");
+        $(classname).css("backgroundImage", "url(\"https://raw.githubusercontent.com/emasys/emasys.github.io/master/weatherAp" +
+                "p/images/fog.jpg\")");
         $(idName).addClass('ion-ios-analytics');
     }
 }
 
-function weather() {
+const weather = () => {
 
     var apiKey = '17eca980f3421907cabe87450e4de798',
         url = 'https://api.forecast.io/forecast/',
@@ -113,7 +114,7 @@ function weather() {
     }
 
     function error() {
-        $('#minutely').text("Unable to retrieve your location");
+        $('#city').text("Unable to retrieve your location");
     }
 
 }
@@ -137,6 +138,14 @@ $(document)
             if (!$('#cel').hasClass('clicked')) {
                 let v = getCel(f);
                 $('#temp').html(v + "<em>°C</em>");
+                let temp = '';
+                for (let i = 1; i <= 3; i++) {
+                    temp = $('#temperature' + i).text();
+                    temp = temp.substring(0, 2);
+                    temp = getCel(temp);
+                    $('#temperature' + i).html(temp + "<em>°C</em>")
+                }
+
                 $('#cel').addClass('clicked');
                 $('#fer').removeClass('clicked');
             }
@@ -150,6 +159,13 @@ $(document)
                 v = v.substring(0, 2);
                 v = getFeh(v);
                 $('#temp').html(v + "<em>°F</em>");
+                let temp = '';
+                for (let i = 1; i <= 3; i++) {
+                    temp = $('#temperature' + i).text();
+                    temp = temp.substring(0, 2);
+                    temp = getFeh(temp);
+                    $('#temperature' + i).html(temp + "<em>°F</em>")
+                }
                 $('#fer').addClass('clicked');
                 $('#cel').removeClass('clicked');
             }
