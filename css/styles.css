@@ -172,6 +172,7 @@ section h2.section-heading {
     font-size: 40px;
     margin-top: 0;
     margin-bottom: 15px;
+    text-shadow: 0 1px 0 white, 0 2px 3px rgba(0, 0, 0, 0.7);
 }
 
 section h3.section-subheading {
