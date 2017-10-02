@@ -1,11 +1,5 @@
 @media only screen and (min-width:960px) {
     /* styles for browsers larger than 960px; */
-    .header {
-        background: #38AACE url('/images/') no-repeat center center;
-        background-size: cover;
-        height: 900px;
-        width: 100%;
-    }
 }
 
 @media only screen and (min-width:1440px) {
@@ -49,7 +43,7 @@
 }
 
 .header {
-    background: #38AACE url('/images/Black_businessman_original_15099.jpg') no-repeat center center;
+    background: #38AACE url('../images/Black_businessman_original_15099.jpg') no-repeat center center;
     background-size: cover;
     height: 700px;
     width: 100%;
@@ -60,7 +54,7 @@
     font-weight: bolder;
     padding: 50px 10px 2px 10px;
     color: white;
-    font-size: 90px;
+    font-size: 60px;
     text-shadow: 0 3px 10px black
 }
 
@@ -91,36 +85,35 @@
 
 .stages {
     height: auto;
-    background: #F0EFEF;
+    /* background: #F0EFEF; */
     width: 100%;
-    padding: 10px;
-    overflow: hidden;
-    margin: 0;
-    position: relative;
+    /* padding: 10px; */
+    margin-bottom: 20px;
+    /* position: relative; */
 }
 
 .details {
     position: relative;
     background: #38AACE;
     height: 300px;
-    margin-top: 10px;
+    margin: 20px;
     width: 100%;
     cursor: pointer;
     border-radius: 80px 10px 10px 10px;
 }
 
 #signUp {
-    background: url('/images/signup.jpg') center center no-repeat;
+    background: url('../images/signup.jpg') center center no-repeat;
     background-size: cover;
 }
 
 #cv {
-    background: url('/images/cv.jpg') center center no-repeat;
+    background: url('../images/cv.jpg') center center no-repeat;
     background-size: cover;
 }
 
 #hired {
-    background: url('/images/business-deal-concept_23-2147513660.jpg') center center no-repeat;
+    background: url('../images/business-deal-concept_23-2147513660.jpg') center center no-repeat;
     background-size: cover;
 }
 
@@ -144,7 +137,7 @@
     text-align: center;
     border-radius: 100%;
     color: white;
-    border: 15px solid #F0EFEF;
+    border: 15px solid #FFFFFF;
     margin: 0px;
 }
 
@@ -159,13 +152,13 @@
 }
 
 .label-text {
-    padding-top: 240px;
+    padding-top: 290px;
 }
 
 .details h3 {
     text-align: center;
     font-weight: bolder;
-    font-size: 50px;
+    font-size: 20px;
     color: white;
     background: #38AACE;
     padding: 5px;
