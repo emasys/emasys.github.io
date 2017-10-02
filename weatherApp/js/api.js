@@ -3,6 +3,7 @@
  */
 let f,
     s,
+    d = [],
     t;
 
 const days = date => {
@@ -81,19 +82,18 @@ const weather = () => {
 
             // var timestamp = moment.unix(data.daily.data[0].time);
 
-            var i = 0;
-
             if (data) {
                 data
                     .daily
                     .data
-                    .map((info) => {
-                        i++;
+                    .map((info, index) => {
+                        d[index] = Math.floor(info.temperatureMax);
+
                         // days(date.time);
-                        $('#date' + i).html(days(info.time));
-                        getIcon(info.icon, null, '#main' + i);
-                        $('#temperature' + i).html(Math.floor(info.temperatureMax) + "<em>°F</em>");
-                        $('#status' + i).html(info.icon)
+                        $('#date' + index).html(days(info.time));
+                        getIcon(info.icon, null, '#main' + index);
+                        $('#temperature' + index).html(Math.floor(info.temperatureMax) + "<em>°F</em>");
+                        $('#status' + index).html(info.summary)
                     })
 
             }
@@ -122,12 +122,12 @@ const weather = () => {
 weather();
 
 const getCel = feh => {
-    let cel = eval((feh - 32) * .5556);
+    let cel = eval((feh - 32) * (5 / 9));
     return Math.floor(cel);
 }
 
 const getFeh = cel => {
-    let feh = eval(cel * 1.8 + 32);
+    let feh = eval((cel * (9 / 5)) + 32);
     return Math.floor(feh);
 }
 
@@ -153,18 +153,15 @@ $(document)
         })
 
         $('#fer').on('click', () => {
-            console.log();
             if ($('#cel').hasClass('clicked') && !$('#fer').hasClass('clicked')) {
-                let v = $('#temp').text();
-                v = v.substring(0, 2);
-                v = getFeh(v);
-                $('#temp').html(v + "<em>°F</em>");
-                let temp = '';
+
+                $('#temp').html(f + "<em>°F</em>");
+
                 for (let i = 1; i <= 3; i++) {
-                    temp = $('#temperature' + i).text();
-                    temp = temp.substring(0, 2);
-                    temp = getFeh(temp);
-                    $('#temperature' + i).html(temp + "<em>°F</em>")
+                    let temp = '',
+                        fix = 0,
+                        final = 0;
+                    $('#temperature' + i).html(d[i] + "<em>°F</em>")
                 }
                 $('#fer').addClass('clicked');
                 $('#cel').removeClass('clicked');
