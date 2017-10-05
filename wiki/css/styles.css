@@ -87,10 +87,11 @@ input[type="search"]:focus {
 }
 
 .result .title {
-    background: lightgray;
+    background: #8ea6a2;
     text-align: center;
     border-bottom: 1px solid #A0A0A0;
     padding: 10px;
+    border-radius: 5px 5px 0 0;
 }
 
 .result .content {
