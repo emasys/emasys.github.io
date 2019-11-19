@@ -1,0 +1,24 @@
+$light-shadow: 0 12px 20px 20px rgba(0, 0, 0, .01);
+$blue: #0073b1;
+$wheat: #f5e9d3;
+
+.container {
+  align-items: center;
+  background: $wheat;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  border-radius: 0.4rem;
+  box-shadow: $light-shadow;
+  font-size: 2rem;
+  padding: 4rem;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+}
