@@ -1,32 +1,24 @@
-$color-purple: #31278a;
-$color-white: #fff;
-$white-shadow: rgba(255, 255, 255, .18);
-$transparent: rgba(255, 255, 255, .0001);
+$light-shadow: 0 12px 20px 20px rgba(0, 0, 0, .01);
+$blue: #0073b1;
+$wheat: #f5e9d3;
 
-.container-fluid {
-  background: $color-purple;
-  height: 100vh;
-  width: 100vw;
+.container {
+  align-items: center;
+  background: $wheat;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-.card-wrapper {
-  height: 100vh;
-  // box-shadow: 0 5px 13px 0 $white-shadow;
-  overflow: hidden;
-  position: relative;
+.card {
+  border-radius: 0.4rem;
+  box-shadow: $light-shadow;
+  font-size: 2rem;
+  padding: 4rem;
 }
 
-.info-card {
-  background: $color-white;
-  border-radius: .2rem;
-  margin: 0 auto;
-  padding: 1rem 1.5rem;
-  position: absolute;
-  transition: transform 3s ease-in-out, background 1.5s;
-  width: 95%;
-}
-
-.next-slide {
-  background: $transparent;
-  transform: translateX(-50rem);
+a {
+  color: $blue;
+  text-decoration: none;
 }
